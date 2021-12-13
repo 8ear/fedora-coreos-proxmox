@@ -11,19 +11,19 @@ export LANG=C
 export LC_ALL=C
 
 # template vm vars
-TEMPLATE_VMID="900"
-TEMPLATE_VMSTORAGE="local"
-SNIPPET_STORAGE="local"
-VMDISK_OPTIONS=",discard=on"
+TEMPLATE_VMID=${TEMPLATE_VMID:-"900"}
+TEMPLATE_VMSTORAGE=${TEMPLATE_VMSTORAGE:-"local"}
+SNIPPET_STORAGE=${SNIPPET_STORAGE:-"local"}
+VMDISK_OPTIONS=${VMDISK_OPTIONS:-",discard=on"}
 
-TEMPLATE_IGNITION="fcos-base-tmplt.yaml"
+TEMPLATE_IGNITION=${TEMPLATE_IGNITION:-"fcos-base-tmplt.yaml"}
 
 # fcos version
 # https://getfedora.org/coreos/download?tab=metal_virtualized&stream=stable&arch=x86_64
-STREAMS=stable
-VERSION=35.20211119.3.0
-PLATEFORM=qemu
-BASEURL=https://builds.coreos.fedoraproject.org
+STREAMS=${STREAMS:-"stable"}
+VERSION=${VERSION:-"35.20211119.3.0"}
+PLATEFORM=${PLATEFORM:-"qemu"}
+BASEURL=${BASEURL:-"https://builds.coreos.fedoraproject.org"}
 
 # =============================================================================================
 # main()
