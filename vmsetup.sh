@@ -19,8 +19,9 @@ VMDISK_OPTIONS=",discard=on"
 TEMPLATE_IGNITION="fcos-base-tmplt.yaml"
 
 # fcos version
+# https://getfedora.org/coreos/download?tab=metal_virtualized&stream=stable&arch=x86_64
 STREAMS=stable
-VERSION=32.20201018.3.0
+VERSION=35.20211119.3.0
 PLATEFORM=qemu
 BASEURL=https://builds.coreos.fedoraproject.org
 
