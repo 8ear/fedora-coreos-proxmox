@@ -20,7 +20,7 @@ setup_fcoreosct()
         local OS=unknown-linux-gnu # Linux
         local DOWNLOAD_URL=https://github.com/coreos/butane/releases/download
 
-        [[ -x /usr/local/bin/fcos-ct ]]&& [[ "x$(/usr/local/bin/fcos-ct --version | awk '{print $NF}')" == "x${CT_VER}" ]]&& return 0
+        [[ -x /usr/local/bin/butane ]]&& [[ "x$(/usr/local/bin/butane --version | awk '{print $NF}')" == "x${CT_VER}" ]]&& return 0
         echo "Setup Fedora CoreOS config transpiler..."
         rm -f /usr/local/bin/fcos-ct
         wget --quiet --show-progress ${DOWNLOAD_URL}/v${CT_VER}/butane-${ARCH}-${OS} -O /usr/local/bin/butane
@@ -38,7 +38,7 @@ setup_yq()
         [[ -x /usr/local/bin/yq ]]&& [[ "x$(/usr/local/bin/yq --version | awk '{print $NF}')" == "x${VER}" ]]&& return 0
         echo "Setup yaml parser tools yq..."
         rm -f /usr/local/bin/yq
-        ${download_command} /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/${VER}/yq_linux_amd64
+        ${download_command} /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v${VER}/yq_linux_amd64
         chmod 755 /usr/local/bin/yq
 }
 setup_yq
